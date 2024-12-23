@@ -2,7 +2,7 @@ import { IoPersonSharp } from "react-icons/io5";
 import { FaPhone } from "react-icons/fa6";
 import css from "./Contact.module.css";
 import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux/actions";
+import { deleteContact } from "../../redux/operations";
 
 const Contact = ({ contact }) => {
   const dispatch = useDispatch();
@@ -17,7 +17,7 @@ const Contact = ({ contact }) => {
         </div>
         <div className={css.person}>
           <FaPhone />
-          <p>{contact.number}</p>
+          <p>{contact.phone}</p>
         </div>
       </div>
       <button className={css.buttonDelete} onClick={handleDelete}>
