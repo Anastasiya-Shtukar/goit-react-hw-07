@@ -6,7 +6,10 @@ import { deleteContact } from "../../redux/operations";
 
 const Contact = ({ contact }) => {
   const dispatch = useDispatch();
-  const handleDelete = () => dispatch(deleteContact(contact.id));
+  const handleDelete = () => {
+    dispatch(deleteContact(contact.id));
+    console.log(contact.id);
+  };
 
   return (
     <div className={css.contactDiv}>

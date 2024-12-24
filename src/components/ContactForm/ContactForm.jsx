@@ -22,7 +22,7 @@ const ContactForm = () => {
     if (contactName.includes(values.name)) {
       alert("Oops, looks like contact already exists");
     } else {
-      dispatch(addContact(values.name, values.phone));
+      dispatch(addContact(values));
     }
 
     actions.resetForm();
